@@ -103,6 +103,8 @@ async function seedRevenue() {
 
 export async function GET() {
   try {
+    await sql`ALTER EXTENSION "uuid-ossp" SET SCHEMA public`;
+    
     const result = await sql.begin((sql) => [
       seedUsers(),
       seedCustomers(),
