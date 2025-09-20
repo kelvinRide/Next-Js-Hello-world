@@ -14,6 +14,7 @@ services:
     #    tmpfs:
     #      size: 134217728 # 128*2^20 bytes = 128Mb
     environment:
+      # don't do this with this password in production
       POSTGRES_PASSWORD: admin1234
       POSTGRES_USER: acme
     ports:
